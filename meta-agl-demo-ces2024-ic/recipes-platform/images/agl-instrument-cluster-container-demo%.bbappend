@@ -17,7 +17,8 @@ IMAGE_INSTALL += " \
     pulseaudio-module-null-sink pulseaudio-module-null-source \
     pulseaudio-module-* \
     kernel-asound-loop \
-    ti-bt-firmware linux-firmware-wl18xx wlconf iw \
+    alsa-states \
+    iw \
     busybox-udhcpc wpa-supplicant-passphrase wpa-supplicant-cli wpa-supplicant \
     can-utils vxcan-setup \
 "
@@ -42,11 +43,4 @@ OUT_OF_TREE_CONTAINER_CONFIGS ??= " \
     cm-config-agl-flutter-ivi-demo \
     cm-config-agl-html5-ivi-demo \
     cm-config-agl-flutter-ivi-demo-simple \
-"
-
-WKS_FILES:remove = " \
-    ${@oe.utils.conditional('OUT_OF_TREE_CONTAINER_IMAGE_DEPLOY_DIR', '', 'agl-ic-container-noloader.wks ', 'agl-ic-container-noloader-demo.wks ', d)} \
-"
-WKS_FILES:prepend = " \
-    ${@oe.utils.conditional('OUT_OF_TREE_CONTAINER_IMAGE_DEPLOY_DIR', '', 'agl-ic-container-noloader.wks ', 'agl-ic-container-noloader-demo-ext.wks ', d)} \
 "
