@@ -2,7 +2,7 @@
 	"name": "agl-momi-ivi-demo",
 	"role": "ivi",
 	"base": {
-		"autoboot": true,
+		"autoboot": false,
 		"bootpriority": 10,
 		"rootfs": {
 			"path": "/opt/container/guests/agl-momi-ivi-demo/rootfs",
@@ -27,6 +27,18 @@
 			"HOME=/home/root"
 		]
 	},
+	"resource": [
+		{
+			"type":		"cgroup",
+			"object":	"cpuset.cpus",
+			"value":	"0-6"
+		},
+		{
+			"type":		"prlimit",
+			"object":	"rtprio",
+			"value":	"50"
+		}
+	],
 	"fs": {
 		"mount": [
 			{

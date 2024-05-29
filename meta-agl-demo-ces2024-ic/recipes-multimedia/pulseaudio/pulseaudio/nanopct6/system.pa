@@ -24,7 +24,7 @@ load-module module-stream-restore
 load-module module-card-restore
 
 ### Use the static hardware detection module (for systems that lack udev/hal support)
-load-module module-alsa-sink device=hw:2,0 sink_name=phy_out
+load-module module-alsa-sink device=hw:4,0 sink_name=phy_out
 load-module module-alsa-source device=hw:8,1 source_name=guest_source_0
 load-module module-alsa-source device=hw:6,1 source_name=guest_source_1
 

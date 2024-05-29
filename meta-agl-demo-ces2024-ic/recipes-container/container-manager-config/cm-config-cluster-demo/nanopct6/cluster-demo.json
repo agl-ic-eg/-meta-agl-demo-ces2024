@@ -26,6 +26,18 @@
 			"HOME=/home/root"
 		]
 	},
+	"resource": [
+		{
+			"type":		"cgroup",
+			"object":	"cpuset.cpus",
+			"value":	"0"
+		},
+		{
+			"type":		"prlimit",
+			"object":	"rtprio",
+			"value":	"50"
+		}
+	],
 	"fs": {
 		"mount": [
 			{
@@ -48,13 +60,6 @@
 				"to":		"var/display/drm-lease-manager/lease",
 				"fstype":	"none",
 				"option": 	"bind,create=file"
-			},
-			{
-				"type": 	"directory",
-				"from": 	"/run/pipewire/icipc-0",
-				"to":		"var/icipc-0",
-				"fstype":	"none",
-				"option": 	"bind,optional,create=file"
 			},
 			{
 				"type": 	"directory",
