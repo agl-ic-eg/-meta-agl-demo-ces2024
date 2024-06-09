@@ -20,7 +20,7 @@ IMAGE_INSTALL += " \
     alsa-states \
     iw \
     busybox-udhcpc wpa-supplicant-passphrase wpa-supplicant-cli wpa-supplicant \
-    can-utils vxcan-setup \
+    can-utils can-utils-access vxcan-setup systemd-netif-config-vxcan \
 "
 
 IMAGE_INSTALL:remove = " \

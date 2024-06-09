@@ -203,6 +203,11 @@
 					"mode": "bridge"
 				}
 			}
+		],
+		"dynamic": [
+			{
+				"ifname": 	"vxcan2"
+			}
 		]
 	}
 }
